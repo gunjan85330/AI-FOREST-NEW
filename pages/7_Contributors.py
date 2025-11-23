@@ -1,38 +1,30 @@
 import streamlit as st
 
-if "logged_in" not in st.session_state:
-    st.switch_page("app/Login.py")
+st.title("Contributors")
 
-st.title(" Project Contributors")
-
-st.markdown("""
-### **Team Members & Contact Information**
-
----
-
-#### **Gunjan Singh**  
-- **Role:** Team Leader  
-- **Email:** gunjan.singh_bsc.math23@gla.ac.in  
-- **GitHub:** https://github.com/gunjan85330  
+st.write("""
+### **Gunjan Singh**  
+Team Leader  
+Email: gunjan.singh_bsc.math23@gla.ac.in  
+GitHub: https://github.com/gunjan85330  
 
 ---
 
-#### **Muskan Khandelwal**  
-- **Email:** muskan.khandelwal_bsc.math23@gla.ac.in  
-- **GitHub:** https://github.com/muskan-9084  
+### **Muskan Khandelwal**  
+Email: muskan.khandelwal_bsc.math23@gla.ac.in  
+GitHub: https://github.com/muskan-9084  
 
 ---
 
-#### **Harshvardhan Singh**  
-- **Email:** harsh.singh_bt.mt23@gla.ac.in  
-- **GitHub:** https://github.com/harsh-f0  
+### **Harshvardhan Singh**  
+Email: harsh.singh_bt.mt23@gla.ac.in  
+GitHub: https://github.com/harsh-f0  
 
 ---
 
-#### **Bhupendra Singh**  
-- **Email:** bhupendra.singh_bsc.math23@gla.ac.in  
-- **GitHub:** https://github.com/bhupendrasinghbscmath23-glitch  
-
----
+### **Bhupendra Singh**  
+Email: bhupendra.singh_bsc.math23@gla.ac.in  
+GitHub: https://github.com/bhupendrasinghbscmath23-glitch  
 """)
+
 
