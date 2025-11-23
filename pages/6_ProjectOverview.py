@@ -1,31 +1,24 @@
 import streamlit as st
 
-if "logged_in" not in st.session_state:
-    st.switch_page("app/Login.py")
+st.title("Project Overview")
 
-st.title(" Project Overview")
-
-st.markdown("""
+st.write("""
 ## AI-Forest: Wildfire Prediction & Simulation System
 
-### **Data Sources**
-- **NASA VIIRS FIRMS Data** (2014–2023)
-- **ERA5 Weather Reanalysis Data** (Temperature, Wind, Humidity, Rainfall, VPD)
-- **Synthetic Data Generation using VAE/GAN**
+### Data Used
+- NASA VIIRS FIRMS Fire Data (10 years)
+- ERA5 Weather Reanalysis Data
+- Synthetic data (VAE/GAN in early phases)
 
-### **Key Features**
-- Fire risk prediction using machine learning  
-- Spread simulation using nearest-neighbor propagation  
-- Interactive web dashboard  
-- Heatmap visualizations  
-- Multi-page design with login  
-
-### **ML Pipeline**
+### ML Pipeline
 1. Data Cleaning  
-2. Weather–Fire Merging  
-3. Lag Feature Engineering  
-4. Balancing and Synthetic Data  
-5. Model Training (XGBoost)  
-6. Deployment (Streamlit Cloud)  
+2. Weather-Fire Merging  
+3. Lag Feature Creation  
+4. Balancing  
+5. XGBoost model training  
+6. Streamlit Deployment  
+
+This system predicts wildfire risk and simulates spread using weather + fire history.
 """)
+
 
