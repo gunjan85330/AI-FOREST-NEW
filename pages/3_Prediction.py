@@ -1,11 +1,8 @@
 import streamlit as st
 import pandas as pd
-from app.utils.model_loader import load_dataset, load_model
+from utils.model_loader import load_dataset, load_model
 
-if "logged_in" not in st.session_state:
-    st.switch_page("app/Login.py")
-
-st.title(" Fire Risk Prediction")
+st.title("Fire Risk Prediction")
 
 df = load_dataset()
 model = load_model()
@@ -15,14 +12,14 @@ lon = st.number_input("Longitude", value=80.3)
 
 if st.button("Predict Fire Risk"):
 
-    dist = ((df["lat"] - lat).abs() + (df["lon"] - lon).abs())
+    dist = (df["lat"] - lat).abs() + (df["lon"] - lon).abs()
     idx = dist.idxmin()
 
     FEATURES = model.feature_names_in_
-
     sample = df.loc[idx, FEATURES].to_frame().T.fillna(0)
 
     prob = model.predict_proba(sample)[0][1]
 
-    st.metric("Predicted Wildfire Risk", f"{prob:.4f}")
+    st.metric("Predicted Fire Risk", f"{prob:.4f}")
+
 
