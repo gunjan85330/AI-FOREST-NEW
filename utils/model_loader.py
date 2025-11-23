@@ -17,3 +17,4 @@ def load_dataset():
 def load_model():
     return joblib.load("models/baseline_risk_model_improved.pkl")
 
+
